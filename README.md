@@ -11,7 +11,7 @@ Luup (Lua-UPnP) is a software engine which incorporates Lua, a popular scripting
 This plug-in has been tested on the Ezlo Vera Home Control system.
 You need a Gmail account that is not set up for OAUTH, it will require some security settings turned off to just allow username/password access
 Custom labels (e.g Vera) can be created and used - > https://hiverhq.com/blog/gmail-labels
-System labels (e.g ^i) can be used too labels are here - > https://developers.google.com/gmail/android/com/google/android/gm/contentprovider/GmailContract.Labels.LabelCanonicalNames
+System labels (e.g ^i or ^all ) can also be used, the availble option are here - > https://developers.google.com/gmail/android/com/google/android/gm/contentprovider/GmailContract.Labels.LabelCanonicalNames
 
 ** Don't use this for any sensitive information, i am just using it for generic alert messages, and the account name has no personally identifiable information
 
