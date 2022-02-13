@@ -48,7 +48,7 @@ local ATOM_SERV = "urn:nodecentral-net:serviceId:GMailAtom1"
 local USERNAME = "your_email_address@gmail.com"
 local PASSWORD = "your_password"
 local CUSTOM_LABELS = "Vera, ^all, "  -- Label(s) to be checked
-local DISPLAY_LABEL = "Vera"  -- Label of count you want to appear on the UI
+local DISPLAY_LABEL = "Vera"  -- Label and associated count you want to appear on the UI
 luup.variable_set(ATOM_SERV, "USERNAME", USERNAME, DEVICE)
 luup.variable_set(ATOM_SERV, "PASSWORD", PASSWORD, DEVICE)
 luup.variable_set(ATOM_SERV, "CUSTOM_LABELS", CUSTOM_LABELS, DEVICE)
