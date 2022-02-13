@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<implementation >
+	<functions>
+
+		function initializeGMailAtom(lul_device)
+			luup.log("ATOM: Label Sensor Plugin STARTING-UP!")
+			GMailAtom = require("L_GMailAtom1")
+			GMailPoller = GMailAtom.gmailPoller
+			return GMailAtom.GMailAtomStartup(lul_device)
+		end
+
+	</functions>
+
+	<startup>initializeGMailAtom</startup>
+	
+	<actionList>
+		<action>
+			<serviceId>urn:micasaverde-com:serviceId:SecuritySensor1</serviceId>
+			<name>SetArmed</name>
+				<run>
+				luup.variable_set("urn:micasaverde-com:serviceId:SecuritySensor1", "Armed", lul_settings.newArmedValue, lul_device) return 4, 0
+				</run>
+		</action>
+	</actionList>
+</implementation>

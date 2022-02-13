@@ -1,0 +1,93 @@
+{
+	"default_icon": "../../../icons/mail.png",
+	"state_icons":[
+		{
+			"img": "../../../icons/mail.png",
+			"conditions": [
+				{
+			"service": "urn:nodecentral-net:serviceId:GMailAtom1",
+			"variable": "Icon",
+			"operator": "==",
+			"value": 1
+				}
+			]
+		},
+		{
+			"img": "../../../icons/error.png",
+			"conditions": [
+				{
+			"service": "urn:nodecentral-net:serviceId:GMailAtom1",
+			"variable": "Icon",
+			"operator": "==",
+			"value": 2
+				}
+			]
+		}
+	],
+	"x":"2",
+	"y":"4",
+	"inScene":"0",
+	"Tabs": [
+		{
+			"Label": {
+				"lang_tag": "ui7_tabname_control",
+				"text": "Control"
+			},
+			"Position": "0",
+			"TabType": "flash",
+			"top_navigation_tab": 1,
+			"ControlGroup":[
+				{
+					"id": "1",
+					"scenegroup": "1"
+				}
+			],
+			"SceneGroup":[
+				{
+					"id": "1",
+					"top": "1.5",
+					"left": "0.25",
+					"x": "1.5",
+					"y": "2"
+				}
+			],
+			"Control": [
+				{
+					"ControlGroup":"1",
+					"ControlType": "variable",
+					"ControlCode": "my_variable1",
+					"top": "1",
+					"left": "0",
+					"Display": {
+						"Service": "urn:nodecentral-net:serviceId:GMailAtom1",
+						"Variable": "DISPLAY_LABEL"
+					}
+				},
+				{
+					"ControlGroup":"1",
+					"ControlType": "variable",
+					"ControlCode": "my_variable2",
+					"top": "0",
+					"left": "0",
+					"Display": {
+						"Service": "urn:nodecentral-net:serviceId:GMailAtom1",
+						"Variable": "DISPLAY_COUNT"
+					}
+				}
+			]
+		},
+		{
+			"Label": {
+				"lang_tag": "ui7_advanced",
+				"text": "Advanced"
+			},
+			"Position": "1",
+			"TabType": "javascript",
+			"ScriptName": "shared.js",
+			"Function": "advanced_device"
+		}
+	],
+	"eventList2": [
+	],
+	"device_type": "urn:schemas-micasaverde-com:device:LightSensor:1"
+	}

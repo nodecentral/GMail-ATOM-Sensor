@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root >
+	<specVersion>
+	</specVersion>
+	<device>
+		<deviceType>urn:schemas-nodecentral-net:device:GMailAtom:1</deviceType>
+		<friendlyName>GMail Atom</friendlyName>
+		<staticJson>D_GMailAtom1.json</staticJson>
+    	<serviceList>
+    	  <service>
+    	    <serviceType>urn:schemas-micasaverde-com:service:SecuritySensor:1</serviceType>
+    	    <serviceId>urn:micasaverde-com:serviceId:SecuritySensor1</serviceId>
+    	    <SCPDURL>S_SecuritySensor1.xml</SCPDURL>
+    	  </service>
+    	  <service>
+    	    <serviceType>urn:schemas-micasaverde-com:service:HaDevice:1</serviceType>
+    	    <serviceId>urn:micasaverde-com:serviceId:HaDevice1</serviceId>
+    	    <SCPDURL>S_HaDevice1.xml</SCPDURL>
+    	  </service>
+    	  <service>
+    	    <serviceType>urn:schemas-nodecentral-net:service:GMailAtom:1</serviceType>
+    	    <serviceId>urn:nodecentral-net:serviceId:GMailAtom1</serviceId>
+    	    <SCPDURL>S_GMailAtom1.xml</SCPDURL>
+    	  </service>
+    	</serviceList>
+    	<implementationList>
+      		<implementationFile>I_GMailAtom1.xml</implementationFile>
+    	</implementationList>
+	</device>
+</root>
