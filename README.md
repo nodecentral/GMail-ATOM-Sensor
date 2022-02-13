@@ -38,6 +38,24 @@ This installation assumes you are running the latest version of Vera software.
 4. Create the decice instance via the appropriate route. For Vera that's Apps/Develop Apps/Create Device/ and putting "D_GMailAtom1.xml" into the Upnp Device Filename box. 
 5. Reload luup to establish the device and then reload luup again (just to be sure) and you should be good to go.
 
+# Quick Configuration script
+
+After you have added the files and created the device, the following is a quick way to configure the device, simply update the following and run it via Apps/Develop Apps/Test Code 
+
+````
+local DEVICE = 1194  -- Device ID assigned on Vera
+local ATOM_SERV = "urn:nodecentral-net:serviceId:GMailAtom1"
+local USERNAME = "your_email_address@gmail.com"
+local PASSWORD = "your_password"
+local CUSTOM_LABELS = "Vera, ^all, "  -- Label(s) to be checked
+local DISPLAY_LABEL = "Vera"  -- Label of count you want to appear on the UI
+luup.variable_set(ATOM_SERV, "USERNAME", USERNAME, DEVICE)
+luup.variable_set(ATOM_SERV, "PASSWORD", PASSWORD, DEVICE)
+luup.variable_set(ATOM_SERV, "CUSTOM_LABELS", CUSTOM_LABELS, DEVICE)
+luup.variable_set(ATOM_SERV, "DISPLAY_LABEL", DISPLAY_LABEL, DEVICE)
+luup.reload()
+````
+
 # Limitations
 
 While it has been tested, it has not been tested very much and may not support other related devices or those running different firmware.
